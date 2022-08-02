@@ -1,0 +1,42 @@
+-
+  var portfolio = {
+    header: 'Примеры проектов по построению бизнеса с Китаем',
+    subheader: 'Работаем с 2014 года по Иркутской области, <br>с 2018 года – по всем регионам России',
+    text: 'Возможна реализация любых проектов – от поиска надежного поставщика товаров до комплексного оснащения объекта дизайнерской мебелью. У нас есть опыт работы с индивидуальными предпринимателями и компаниями, ресторанами и кафе, студиями красоты из различных городов России.',
+    items: [
+      {
+        image: 'img/portfolio-01.png',
+        title: 'Магазин детских товаров, Иркутск',
+        text: 'Машины, самокаты, скейтборды'
+      },
+      {
+        image: 'img/portfolio-02.png',
+        title: 'Cтудия красоты «Лица», Иркутск',
+        text: 'Мебель и оборудование'
+      },
+      {
+        image: 'img/portfolio-03.png',
+        title: 'Ресторанный комплекс «Мираж», Иркутск',
+        text: 'Мебель из искусственного ротанга'
+      },
+      {
+        image: 'img/portfolio-04.jpg',
+        title: 'Ресторан японской кухни «Суши Студио», Иркутск',
+        text: 'Керамогранит, мебель, освещение, посуда, столовые приборы, декор'
+      },
+    ]
+  }
+
+.portfolio#portfolio
+  .container
+    h2.portfolio__header !{portfolio.header}
+    p.portfolio__subheader.subheader !{portfolio.subheader}
+    p.portfolio__text !{portfolio.text}
+  .portfolio-items.owl-carousel
+    each item in portfolio.items
+      .portfolio__item
+        .portfolio__item-image-part
+          img.portfolio__item-image(src=item.image, alt='')
+        .portfolio__item-text-part
+          p.portfolio__item-title !{item.title}
+          p.portfolio__item-text !{item.text}

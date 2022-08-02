@@ -1,0 +1,22 @@
+-
+  var menu = [
+    { href: '#services', text: 'Услуги' },
+    { href: '#scheme', text: 'Схема работы' },
+    { href: '#portfolio', text: 'Галерея проектов' },
+    { href: '#about', text: 'О компании' },
+    { href: '#order', text: 'Оставить заявку' }
+  ]
+
+.header__bottom
+  .container
+    .header__bottom-inner
+      .menu
+        .menu-toggle
+          i.icon-toggle
+            span
+            span
+            span
+        ul.menu-items.row
+          each item in menu
+            li.menu__item
+              a.menu__link.goto(href=item.href) !{item.text}

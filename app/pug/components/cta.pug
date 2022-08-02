@@ -1,0 +1,11 @@
+-
+  var cta = {
+    text: 'Обсудите детали построения бизнеса в Китае — узнайте, как можно упростить вашу деятельность',
+    button: { href: '#callback', text: 'Перезвоните мне' }
+  }
+
+.cta
+  .container
+    .cta__inner.row.align-items-center
+      p.cta__text.col-md-8 !{cta.text}
+      a.cta__button.btn.btn_white.col-md-4(href=cta.button.href) !{cta.button.text}

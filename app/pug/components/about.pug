@@ -1,0 +1,39 @@
+-
+  var about = {
+    header: 'AsiaCompany – ваш русский посредник в Китае',
+    subheader: 'Помогаем развиваться',
+    left: {
+      header: 'В случае сотрудничества с нами вы получите ряд привилегий, которые позволят прийти к успеху:',
+      list: [
+        'персональные скидки от производителей;',
+        'надежные поставщики продукции;',
+        'полное отсутствие сложностей при ведении переговоров и таможенном оформлении;',
+        'точные сроки доставки товаров и возможность отследить груз;',
+        'оперативное оформление необходимой документации и многое другое',
+      ],
+      bottom: 'Работаем, чтобы вы могли строить успешный бизнес с Китаем без рисков и хлопот.'
+    },
+    ceo: {
+      image: 'img/ceo.png',
+      name: 'Дмитрий Шиманский',
+      position: 'Основатель и руководитель компании AsiaCompany'
+    }
+  }
+
+.about#about
+  .container
+    .about__inner.row
+      .about__left.col-xl-8
+        h2.about__header !{about.header}
+        p.about__subheader.subheader !{about.subheader}
+        .about__quote
+          p.about__quote-header !{about.left.header}
+          ul
+            each li in about.left.list
+              li !{li}
+          p.about__quote-bottom !{about.left.bottom}
+        .about__ceo
+          p.about__ceo-name !{about.ceo.name}
+          p.about__ceo-position !{about.ceo.position}
+      .about__right.col-xl-4
+        img.about__image(src=about.ceo.image, alt=about.ceo.name)

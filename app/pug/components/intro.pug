@@ -1,0 +1,40 @@
+-
+  var intro = {
+    header: 'Стройте бизнес с Китаем <br>без рисков вместе с AsiaCompany',
+    text: 'Ожидания совпадут с реальностью — вы получите качественные товары в срок',
+    items: [
+      {
+        image: 'img/sprite.svg#intro-01',
+        text: 'Сотрудничество с ИП и компаниями со всех регионов России'
+      },
+      {
+        image: 'img/sprite.svg#intro-02',
+        text: 'Полный комплекс услуг — от поиска иностранных поставщиков до таможенного оформления'
+      },
+      {
+        image: 'img/sprite.svg#intro-03',
+        text: 'Финансовые гарантии — страхование грузов и работа согласно условиям заключенного договора'
+      },
+      {
+        image: 'img/sprite.svg#intro-04',
+        text: 'Персональный подход к каждому заказу — мы заинтересованы в успехе вашего дела'
+      }
+    ],
+    bottom: 'Бесплатная предварительная консультация по построению бизнеса с Китаем — узнайте всю интересующую вас информацию',
+    button: { href: '#callback', text: 'Обсудить сотрудничество' }
+  }
+
+.intro#intro
+  .container
+    h1.intro__header !{intro.header}
+    p.intro__text !{intro.text}
+    .intro-items.row
+      each item in intro.items
+        .intro__item.col-md-3.col-sm-6
+          .intro__item-image-part
+            img.intro__item-image(src=item.image, alt="")
+          .intro__item-text-part !{item.text}
+    .intro__bottom.row.no-gutters
+      .intro__bottom-text.col-xl-8 !{intro.bottom}
+      a.intro__bottom-button.btn.btn_filled.col-xl-3(href=intro.button.href) 
+        span !{intro.button.text}

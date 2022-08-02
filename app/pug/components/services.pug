@@ -1,0 +1,50 @@
+-
+  var services = {
+    header: 'Услуги русского посредника в Китае',
+    subheader: 'Фиксированная стоимость — известна заранее <br>и не меняется в процессе',
+    items: [
+      {
+        title: 'Поиск поставщика и проверка фабрик',
+        image: 'img/services-01.png',
+        text: 'Выбирайте из лучшего, что есть на рынке – найдем 1–3 надежных производителей и дадим рекомендации по работе с ними'
+      },
+      {
+        title: 'Заказ и доставка образцов',
+        image: 'img/services-02.png',
+        text: 'Убедитесь в соответствии заявленных характеристик продукции реальным – закажем ее образцы для сопоставления'
+      },
+      {
+        title: 'Логистика',
+        image: 'img/services-03.png',
+        text: 'Сэкономьте на доставке товаров из Китая оптом — предложим наиболее быстрый и доступный вариант их транспортировки в ваш город'
+      },
+      {
+        title: 'Контроль отгрузки',
+        image: 'img/services-04.png',
+        text: 'Будьте уверены, что получите товары без повреждений – проверим целостность упаковки, наличие пломбы и загрузку'
+      },
+      {
+        title: 'Таможенное оформление',
+        image: 'img/services-05.png',
+        text: 'Исключите возникновение сложностей с документами – делегируйте их подготовку нам, занимаемся данным вопросом дольше 6 лет'
+      },
+      {
+        title: 'Ведение переговоров',
+        image: 'img/services-06.png',
+        text: 'Добивайтесь снижения закупочных цен и других целей с помощью профессионалов – проведем переговоры с учетом менталитета'
+      },
+    ]
+  }
+
+.services#services
+  .container
+    h2.services__header !{services.header}
+    p.services__subheader.subheader !{services.subheader}
+    .services-items.row
+      each item in services.items
+        .services__item.col-md-6.col-xl-4
+          .services__item-image-part
+            img.services__item-image(src=item.image, alt='')
+          .services__item-text-part
+            p.services__item-header !{item.title}
+            p.services__item-text !{item.text}

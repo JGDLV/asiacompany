@@ -1,0 +1,35 @@
+-
+  var order = {
+    header: 'Оставьте заявку',
+    text: 'чтобы обсудить сотрудничество и поставку товаров из Китая оптом — <br>предварительно бесплатно проконсультируем вас по всем возникшим вопросам',
+    form: {
+      header: 'Заказать обратный звонок',
+      subheader: 'Работаем по будням с 09:00 до 20:00',
+    }
+  }
+
+.order#order
+  .container
+    h2.order__header !{order.header}
+    p.order__text !{order.text}
+    .row.justify-content-center
+      form.order-form.col-xl-5.col-md-9.col-sm-12
+        h2.order-form__header !{order.form.header}
+        p.order-form__subheader !{order.form.subheader}
+        .order-form__inner
+          .order-form__row.row
+            label.order-form__label.col-md-6
+              p Ваше имя
+              input.order-form__input.order-form__name(type="text" name="name" placeholder="Ваше имя")
+            label.order-form__label.col-md-6
+              p Ваш номер телефона #[span *]
+              input.order-form__input.order-form__phone(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+          .order-form__row
+            label.order-form__label
+              p Комментарий к заявке
+              textarea.order-form__comment(type="text" name="comment" placeholder="Ваши комментарии")
+          button.order-form__button.btn.btn_filled(type="submit")
+            span Отправить заявку
+          label.order-form__privacy
+            input(type="checkbox" required)
+            span Согласен на обработку #[a(href="#") персональных данных]

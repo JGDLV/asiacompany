@@ -1,0 +1,32 @@
+-
+  var footer = {
+    address: {
+      rus: {
+        label: 'Адрес офиса:',
+        value: 'г. Иркутск, ул. Седова 48, офис 102',
+        map: '#rus-map'
+      },
+      chn: {
+        label: 'Адрес склада в Китае:',
+        value: 'Guangzhou city, Yuexiu District, No.668 Renmin Road North, 7/F, R70',
+        map: '#chn-map'
+      },
+    }
+  }
+
+.footer__top
+  .container
+    .footer__top-inner.row
+      .footer__address.col-lg-4
+        span.footer__address-label !{footer.address.rus.label} 
+        span.footer__address-value !{footer.address.rus.value}
+        div
+          a.footer__address-map(href=footer.address.rus.map) Посмотреть на карте
+      .footer__address.col-lg-5
+        span.footer__address-label !{footer.address.chn.label} 
+        span.footer__address-value !{footer.address.chn.value}
+        div
+          a.footer__address-map(href=footer.address.chn.map) Посмотреть на карте
+      .footer__contacts.col-lg-3
+        a.footer__contacts-phone(href="tel:+" + clearPhone(header.phone)) !{header.phone}
+        p.footer__contacts-whours !{header.whours}

@@ -1,0 +1,22 @@
+-
+  var header = {
+    logo: 'img/logo.png',
+    tagline: 'Поиск поставщиков и доставка товаров из Китая. <br>Контроль отгрузки и таможенное оформление',
+    phone: '+7 (908) 660-15-52',
+    whours: 'Будни с 9:00–20:00',
+    button: { href: '#callback', text: 'Заказать звонок' }
+  }
+
+.header__top
+  .container
+    .header__top-inner.row
+      .logo.col-md-4.col-lg-2
+        a.logo__link(href='/')
+          img.logo__image(src=header.logo, alt='')
+      .tagline.col-md-4.col-lg-5 !{header.tagline}
+      .header__contacts.col-md-4.col-lg-3
+        a.header__contacts-phone(href='tel:+' + clearPhone(header.phone)) !{header.phone}
+        p.header__contacts-whours !{header.whours}
+      .header__button.col-md-4.col-lg-2
+        a.header__button-link.btn(href=header.button.href)
+          span !{header.button.text}

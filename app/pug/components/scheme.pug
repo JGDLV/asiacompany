@@ -1,0 +1,62 @@
+-
+  var scheme = {
+    header: 'Сделайте первый шаг к построению <br>успешного бизнеса с Китаем',
+    subheader: 'Оставьте заявку, после этого:',
+    items: [
+      {
+        image: 'img/sprite.svg#scheme-01',
+        text: '<span>Бесплатно проконсультируем</span> вас по всем вопросам поставки товаров из Китая оптом'
+      },
+      {
+        image: 'img/sprite.svg#scheme-02',
+        text: '<span>Согласуем детали</span> сотрудничества и предоставим подробную смету на необходимые услуги'
+      },
+      {
+        image: 'img/sprite.svg#scheme-03',
+        text: '<span>Подготовим договор и счет</span> на оплату – после внесения аванса приступим к решению задачи'
+      },
+      {
+        image: 'img/sprite.svg#scheme-04',
+        text: '<span>Выполним необходимые работы</span> и отчитаемся перед вами – дождемся остатка оплаты'
+      },
+    ],
+    bottom: [
+      {
+        image: 'img/sprite.svg#payment',
+        header: 'Оплата',
+        texts: [
+          'Понадобится предоплата для заказа образцов, поставки товаров из Китая оптом и некоторых других услуг – ее размер определяется в индивидуальном порядке перед заключением договора.',
+          'Рассчитаться можно несколькими способами: наличными деньгами, банковской картой, переводом через СБП, по расчетному счету или на карту «Сбербанк».'
+        ]
+      },
+      {
+        image: 'img/sprite.svg#guarantee',
+        header: 'Гарантии',
+        texts: [
+          'Предоставляем качественный сервис – в обязательном порядке предварительно обсуждаем детали с заказчиком, чтобы максимально точно понять его запросы.',
+          'Также гарантируем сохранность груза при доставке – если вдруг его повредят, то за свой счет заменим товары, выполним ремонт или вернем вам их полную стоимость.'
+        ]
+      },
+    ]
+  }
+
+.scheme#scheme
+  .container
+    h2.scheme__header !{scheme.header}
+    p.scheme__subheader.subheader !{scheme.subheader}
+    .scheme-items.row
+      each item in scheme.items
+        .scheme__item.col-lg-3.col-md-6
+          .scheme__item-image-part
+            img.scheme__item-image(src=item.image, alt="")
+          .scheme__item-text-part !{item.text}
+    .scheme-bottom.row
+      each item in scheme.bottom
+        .scheme-bottom__item-wrap.col-md-6
+          .scheme-bottom__item
+            .scheme-bottom__item-image-part
+              img.scheme-bottom__item-image(src=item.image, alt='')
+            .scheme-bottom__item-text-part
+              p.scheme-bottom__item-header !{item.header}
+              each text in item.texts
+                p.scheme-bottom__item-text !{text}
